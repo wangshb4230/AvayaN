@@ -778,6 +778,7 @@ smartsee.connectSmartSee(false, 7023, onOpen, onClose, onStatus, onCallStatus, o
     }
 
     // Switch camera
+    //github测试
     this.switchCamera = function (cameraId) {
       if (this.ws.readyState == WebSocket.OPEN) {
         var cmd = "sc`" + cameraId;
