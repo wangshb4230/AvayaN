@@ -1,0 +1,29 @@
+{
+  "metadata": {
+    "name": "Avaya Video Cc",
+    "description": "js代码分开写,调整js+6,调整布局,修改按钮，调整页面+1",
+    "tags": "demo, widget, example, other",
+    "library": "My library",
+    "version": "1.1.2",
+    "date": "2019-06-17T08:08:33.402Z",
+    "id": "9691fbc7-c2c8-4585-8dc8-51e8557c65cb"
+  },
+  "configuration": {
+    "external": true,
+    "timeout": 5000,
+    "serie": true,
+    "name": "9691fbc7-c2c8-4585-8dc8-51e8557c65cb",
+    "element": "<Avaya-Video-CC></Avaya-Video-CC>",
+    "icon": "aoc-home",
+    "files": [
+      "Avaya-Video-CC/Avaya-Video-CC.css",
+      "Avaya-Video-CC/Avaya-Video-CC.js",
+      "Avaya-Video-CC/libs/jquery-1.10.2.js",
+      "Avaya-Video-CC/libs/bootstrap-3.3.4.js",
+      "Avaya-Video-CC/libs/jquery-ui.min.js",
+      "Avaya-Video-CC/libs/jquery.ui.touch-punch.min.js",
+      "Avaya-Video-CC/libs/lobipanel.js",
+      "Avaya-Video-CC/libs/SmartSee.js"
+    ]
+  }
+}

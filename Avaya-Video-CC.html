@@ -1,0 +1,157 @@
+<div class="neo-widget">
+
+  <div class="neo-widget__header aoc-home">Avaya Video Cc</div>
+
+  <div class="neo-widget__content neo-widget__content--indented">
+
+
+
+    <!--视频1-->
+    <div id="video1" class="panel panel-default;" style="all:inherit;overflow: auto;word-break: break-all;resize: none;background:white;">
+      <div class="panel-heading">
+        <div class="panel-title">
+          <h4>Local<span id="localVideoInfo"></span>
+            <div class="btn-group pull-right">
+              <button class="neo-btn neo-btn--default" ng-click="initVideo()">Init</button>
+              <button class="neo-btn neo-btn--default" ng-click="releaseVideo()">rel</button>
+            </div>
+          </h4>
+        </div>
+      </div>
+      <div class="panel-body" style="padding: 0;">
+        <div class="col-md-12" style="height: inherit;background: white;padding: 0;overflow-y: hidden;">
+          <canvas id="local" ></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!--      视频2-->
+    <div id="video2" class="panel panel-default" style="position:absolute;height: 300px;overflow: auto;word-break: break-all;resize: none;bottom:0;right: 0;">
+      <div class="panel-heading">
+        <div class="panel-title">
+          <h4>Remote<span id="remoteVideoInfo"></span>
+          </h4>
+        </div>
+      </div>
+      <div class="panel-body " style="padding: 0;">
+        <div class="col-md-12" style="background: white;padding: 0;overflow-y: hidden;">
+          <canvas id="remote"></canvas>
+        </div>
+      </div>
+    </div>
+    <!--         视频窗口完毕           -->
+
+
+    <!--表单不能为空-->
+
+    <form class="form-horizontal" style="display: none">
+      <div class="form-group">
+        <div class="col-md-offset-4 col-md-8">
+
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4 control-label">GreenScreen</label>
+        <div class="col-md-8">
+          <div class="checkbox">
+            <label><input type="checkbox" id="greenScreen"></label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4 control-label">serverIp</label>
+        <div class="col-md-8">
+          <input type="text" id="serverIp" class="form-control" value="116.62.129.242" placeholder="serverIp">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4 control-label">serverPort</label>
+        <div class="col-md-8">
+          <input type="text" id="serverPort" class="form-control" value="5070" placeholder="serverPort">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4 control-label">userId</label>
+        <div class="col-md-8">
+          <input type="text" id="userId" class="form-control" value="10009" placeholder="userId">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4 control-label">AliasName</label>
+        <div class="col-md-8">
+          <input type="text" id="aliasName" class="form-control" value="10009" placeholder="AliasName">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4 control-label">password</label>
+        <div class="col-md-8">
+          <input type="text" id="password" class="form-control" value="10009" placeholder="password">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4 control-label">localIp</label>
+        <div class="col-md-8">
+          <input type="text" id="localIp" class="form-control" value="0.0.0.0" placeholder="localIp">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4 control-label">localPort</label>
+        <div class="col-md-8">
+          <input type="text" id="localPort" class="form-control" value="5090" placeholder="localPort">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4 control-label">MqServerIp</label>
+        <div class="col-md-8">
+          <input type="text" id="mqServerIp" class="form-control" value="116.62.129.242" placeholder="MqServerIp">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4 control-label">MqServerPort</label>
+        <div class="col-md-8">
+          <input type="text" id="mqServerPort" class="form-control" value="5672" placeholder="MqServerPort">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4 control-label">MqVHost</label>
+        <div class="col-md-8">
+          <input type="text" id="mqVHost" class="form-control" value="vms" placeholder="MqVHost">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4 control-label">MqId</label>
+        <div class="col-md-8">
+          <input type="text" id="mqId" class="form-control" value="mcu" placeholder="MqId">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4 control-label">MqPassword</label>
+        <div class="col-md-8">
+          <input type="text" id="mqPassword" class="form-control" value="bnp@1234" placeholder="MqPassword">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4 control-label">FileServerIp</label>
+        <div class="col-md-8">
+          <input type="text" id="fileServerIp" class="form-control" value="116.62.129.242" placeholder="FileServerIp">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4 control-label">FileServerPort</label>
+        <div class="col-md-8">
+          <input type="text" id="fileServerPort" class="form-control" value="60000" placeholder="FileServerPort">
+        </div>
+      </div>
+
+    </form>
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+

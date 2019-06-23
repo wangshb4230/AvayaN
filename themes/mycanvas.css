@@ -1,0 +1,28 @@
+
+html, body { height: 100%;}
+
+
+#video1 {
+  all:inherit;
+  overflow: auto;
+  word-break: break-all;
+  resize: none;
+  background:white;
+}
+
+
+#video2{
+  position:absolute;
+  height: 300px;
+  overflow: auto;
+  word-break: break-all;
+  resize: none;
+  bottom:0;
+  right: 0;
+
+}
+.pull-right {
+  float: right !important;
+}
+
+
